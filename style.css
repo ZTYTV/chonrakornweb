@@ -47,6 +47,7 @@ header{
 
 .logo:hover{
     transform: scale(1.1);
+    text-shadow: 0 0 5px skyblue;
 }
 
 nav a{
@@ -138,7 +139,7 @@ span{
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 50px skyblue;
+    box-shadow: 0 0 50px #204653;
     cursor: pointer;
     transition: 0.2s linear;
 }
@@ -201,13 +202,13 @@ span{
     position: relative;
 }
 
-.typing-text span::before{
+.typing-text .loop1::before{
     content: "software Developer";
     color: skyblue;
     animation: words 20s infinite;
 }
 
-.typing-text span::after{
+.typing-text .loop1::after{
     content: "";
     background-color: black;
     position: absolute;
@@ -217,6 +218,17 @@ span{
     right: -8;
     animation: cursor 0.6s infinite;
 }
+.typing-text .sorry::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
 
 @keyframes cursor{
     to{
