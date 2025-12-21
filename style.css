@@ -24,7 +24,7 @@ body{
 
 header{
     margin-top: 20px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -69,33 +69,6 @@ nav a:hover,
 nav a.active{
     color: skyblue;
     border-bottom:3px solid skyblue ;
-}
-
-@media(max-width:995px){
-    nav{
-        position: absolute;
-        display: none;
-        top: 100%;
-        right: 0;
-        width: 40%;
-    }
-
-    nav.active{
-        display: block;
-    }
-
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a:active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid skyblue;
-    }
 }
 
 section{
@@ -257,7 +230,7 @@ span{
     }
 }
 
-@media(max-width: 995px){
+@media(max-width: 880px){
     .home{
         flex-direction: column;
     }
@@ -267,15 +240,45 @@ span{
     }
 
     .home-content h1{
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .home-img img{
-        width: 70vw;
+        width: 60vw;
         margin-top: 4rem;
     }
     
-    #menu-icon{
+    #menu-icon {
         display: block;
+        position: absolute;
+        right: 9%;
+    }
+    
+   nav {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        transition: 0.3s ease;
+    }
+
+    nav.active{
+        display: flex;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 1.5rem 0;
+        margin-left: 0;
+    }
+
+    nav a:hover,
+    nav a:active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid skyblue;
     }
 }
